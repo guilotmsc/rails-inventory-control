@@ -9,7 +9,7 @@ The setups steps expect following tools installed on the system.
 ##### 1. Check out the repository
 
 ```bash
-    git clone https://github.com/guilotmsc/inventory-control.git
+    git clone https://github.com/guilotmsc/rails-inventory-control.git
 ```
 
 ##### 2. Run bundle install
