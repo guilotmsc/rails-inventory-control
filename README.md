@@ -45,3 +45,12 @@ You can run the test suite using the command given below.
 ```ruby
     rspec
 ```
+
+
+##### 5. Test with CSV file
+
+You can with CSV file, located at:
+
+```bash
+    ├── public/movimentacao_de_estoque.csv
+```  

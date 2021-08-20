@@ -1,0 +1,14 @@
+Nome do depósito,Data,Tipo de movimentação,Nome do produto,Quantidade do produto
+Depósito 1,01/01/2021,E,Soja,2000
+Depósito 1,01/01/2021,E,Arroz,1000
+Depósito 2,02/01/2021,E,Milho,7000
+Depósito 3,03/01/2021,E,Milho,1000
+Depósito 3,04/01/2021,S,Soja,10
+Depósito 2,01/01/2021,S,Arroz,600
+Depósito 4,05/01/2021,S,Arroz,10
+Depósito 2,01/01/2021,E,Arroz,1000
+Depósito 2,01/02/2021,E,Arroz,200
+Depósito 1,04/01/2021,E,Milho,100
+Depósito 2,02/01/2021,E,Arroz,500
+Depósito 1,04/01/2021,S,Arroz,100
+Depósito 1,10/01/2021,S,Soja,2000
