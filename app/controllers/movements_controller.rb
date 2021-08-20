@@ -31,17 +31,10 @@ class MovementsController < ApplicationController
     file_path = params[:file]
     movements_insertion_errors = Array.new
 
-    if file_path.path.split('.').last.to_s.downcase != 'csv'
-      redirect_to :root, :flash => { :error => "File must be CSV format" }
-      return
-    end
+    csv_file_errors = validate_csv_file(file_path)
 
-    headers = CSV.foreach(file_path).first
-
-    valid_header = ["Nome do depósito", "Data", "Tipo de movimentação", "Nome do produto", "Quantidade do produto"]
-
-    if valid_header.difference(headers).any?
-      redirect_to :root, :flash => { :error => "File must be a valid header" }
+    if csv_file_errors.present?
+      redirect_to :root, :flash => { :error => csv_file_errors }
       return
     end
 
@@ -60,6 +53,20 @@ class MovementsController < ApplicationController
     end
   end
 
+
+  def validate_csv_file(file_path)
+    if file_path.path.split('.').last.to_s.downcase != 'csv'  
+      return "File must be CSV format"
+    end
+  
+    headers = CSV.foreach(file_path).first
+    valid_header = ["Nome do depósito", "Data", "Tipo de movimentação", "Nome do produto", "Quantidade do produto"]
+
+    if valid_header.difference(headers).any?
+      return "File must be a valid header"
+    end
+  end
+  
 
   def sort_csv_rows_by_date_and_movement_type(csv_file_path)
     csv_rows = []
