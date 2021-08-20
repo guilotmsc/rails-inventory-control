@@ -1,0 +1,22 @@
+<%= render 'form', inventory_movement: @inventory_movement %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th> 
+      <th scope="col">Produto</th>
+      <th scope="col">Deposito</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @total_amount_of_stock.each do |row| %>
+        <tr>
+            <th scope="col">#</th> 
+            <td><%= row[:product] %></td>
+            <td><%= row[:storage_place] %></td>
+            <td><%= row[:quantity] %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
