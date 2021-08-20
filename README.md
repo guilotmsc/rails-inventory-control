@@ -47,7 +47,7 @@ You can run the test suite using the command given below.
 ```
 
 
-##### 5. Test with CSV file
+##### 6. Test with CSV file
 
 You can with CSV file, located at:
 
